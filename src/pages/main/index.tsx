@@ -2,6 +2,26 @@ import './index.scss';
 import Logo from '../../Logo-white.svg';
 import { Link } from 'react-router-dom';
 
+const footerLinks = [
+    'About',
+    'Help Center',
+    'Terms of Service',
+    'Privacy Policy',
+    'Privacy Policy',
+    'Cookie Policy',
+    'Accessibility',
+    'Ads info',
+    'Blog',
+    'Status',
+    'Careers',
+    'Brand Resources',
+    'Advertising',
+    'Marketing',
+    'Twitter for Business',
+    'Developers',
+    'Directory',
+    'Settings'
+];
 export default function Main() {
     return (
         <div id='main'>
@@ -14,23 +34,32 @@ export default function Main() {
                     <div className='logo'>
                         <img src={Logo} alt='Logo' />
                     </div>
-                    <div className='title'>Happening now</div>
+                    <h1 className='title'>Happening now</h1>
                     <div className='joining'>
-                        <div className='title'>Join Twitter today.</div>
-                        <Link to='#' className='signup'>
+                        <h4 className='title'>Join Twitter today.</h4>
+                        <Link to='/signup' className='rounded'>
                             sign up with phone or email
                         </Link>
                         <p>
                             By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.
                         </p>
                     </div>
-                    <div className='have-an-account'>Already have an account?</div>
-                    <Link to='#'>sign in</Link>
+                    <div className='signin'>
+                        <h4>Already have an account?</h4>
+                        <Link to='/signin' className='rounded'>
+                            sign in
+                        </Link>
+                    </div>
                 </div>
             </main>
             <footer className='footer'>
                 <ul className='list'>
-                    <li>about</li>
+                    {footerLinks.map(hrf => (
+                        <li>
+                            <Link to={'/' + hrf.toLowerCase()}>{hrf}</Link>
+                        </li>
+                    ))}
+                    <li>© 2022 Twitter, Inc.</li>
                 </ul>
             </footer>
         </div>
