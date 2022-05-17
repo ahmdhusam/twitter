@@ -54,9 +54,16 @@ $main-color: rgb(29, 155, 240);
                 > * {
                     margin-block: 0.5rem;
                 }
-                a {
+                > a {
                     background-color: $main-color;
                     color: white;
+                }
+                p {
+                    font-size: x-small;
+                    color: grey;
+                    a {
+                        color: $main-color;
+                    }
                 }
             }
             .signin {
@@ -77,7 +84,7 @@ $main-color: rgb(29, 155, 240);
                 width: 100%;
                 display: inline-block;
                 text-align: center;
-                font-size: large;
+                font-size: medium;
                 text-transform: capitalize;
             }
             h4 {

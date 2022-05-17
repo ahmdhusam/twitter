@@ -41,7 +41,8 @@ export default function Main() {
                             sign up with phone or email
                         </Link>
                         <p>
-                            By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.
+                            By signing up, you agree to the <a href='#'>Terms of Service</a> and{' '}
+                            <a href='#'>Privacy Policy</a>, including <a href='#'>Cookie Use</a>.
                         </p>
                     </div>
                     <div className='signin'>
@@ -56,7 +57,7 @@ export default function Main() {
                 <ul className='list'>
                     {footerLinks.map(hrf => (
                         <li>
-                            <Link to={'/' + hrf.toLowerCase()}>{hrf}</Link>
+                            <Link to={'/' + hrf.trim().replaceAll(' ', '-').toLowerCase()}>{hrf}</Link>
                         </li>
                     ))}
                     <li>© 2022 Twitter, Inc.</li>
