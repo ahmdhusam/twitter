@@ -105,6 +105,9 @@ $main-color: rgb(29, 155, 240);
                 font-size: small;
                 a {
                     color: gray;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }

@@ -1,0 +1,87 @@
+$main-color: rgb(29, 155, 240);
+$sec-color: rgba(91, 112, 131, 0.4);
+
+#sign {
+    height: 100vh;
+    background-color: black;
+    > main {
+        height: 100%;
+        background-color: $sec-color;
+        display: grid;
+        place-items: center;
+
+        section {
+            width: 50%;
+            background-color: black;
+            border-radius: 1rem;
+            padding: 1rem;
+            header {
+                display: flex;
+                a.close {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    color: white;
+                    cursor: pointer;
+                    margin-right: calc(50% - (40px + 20px));
+                }
+                img {
+                    width: 40px;
+                }
+            }
+            main {
+                width: 50%;
+                margin: auto;
+                margin-block: 3rem;
+                > * {
+                    margin: auto;
+                    margin-block: 2rem;
+                }
+                .title {
+                    font-weight: 800;
+                    font-size: 2rem;
+                    color: white;
+                }
+                form {
+                    input {
+                        margin: auto;
+                        margin-block: 1rem;
+                        width: 100%;
+                        padding: 1rem;
+                        background-color: transparent;
+                        color: white;
+                        border-radius: 0.4rem;
+                        font-size: medium;
+                        border: 1px solid white;
+                        outline: none;
+                        &:focus {
+                            border-color: $main-color;
+                        }
+                    }
+                    button {
+                        width: 100%;
+                        margin-block: 1rem;
+                        padding: 0.5rem;
+                        border-radius: 1rem;
+                        font-size: medium;
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                footer {
+                    span {
+                        color: grey;
+                    }
+                    a {
+                        color: $main-color;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

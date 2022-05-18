@@ -7,7 +7,6 @@ const footerLinks = [
     'Help Center',
     'Terms of Service',
     'Privacy Policy',
-    'Privacy Policy',
     'Cookie Policy',
     'Accessibility',
     'Ads info',
@@ -56,7 +55,7 @@ export default function Main() {
             <footer className='footer'>
                 <ul className='list'>
                     {footerLinks.map(hrf => (
-                        <li>
+                        <li key={hrf.trim().replaceAll(' ', '-').toLowerCase()}>
                             <Link to={'/' + hrf.trim().replaceAll(' ', '-').toLowerCase()}>{hrf}</Link>
                         </li>
                     ))}
