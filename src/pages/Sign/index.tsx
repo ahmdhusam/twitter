@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Form, Formik } from 'formik';
 
 // components
-import FormikInput from './Input';
+import FormikInput from './input';
 
 // libs
 import { initialValues, validetSchema } from '../../libs/formikSchema';

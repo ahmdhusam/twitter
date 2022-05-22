@@ -1,6 +1,7 @@
-import { Main } from './pages';
 import { Route, Routes } from 'react-router-dom';
-import MainSignForm from './pages/Sign';
+
+// Pages
+import { Home, Main, MainSignForm } from './pages';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 path='/signin'
                 element={<MainSignForm btnSubValue='In' msgBeforLink="Don't have an account?" redirectTo='up' />}
             />
+            <Route path='/home' element={<Home />} />
             <Route
                 path='*'
                 element={(() => (
