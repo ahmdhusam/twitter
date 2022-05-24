@@ -1,4 +1,44 @@
+$main-color: #1e2732;
+$search-color: #273340;
+
 #sidebar {
-    background-color: yellow;
+    padding-inline: 3rem;
     grid-area: sidebar;
+    .search {
+        margin-top: 0.5rem;
+        padding: 0.8rem;
+        background-color: $search-color;
+        color: white;
+        border: none;
+        outline: none;
+        font-size: medium;
+    }
+    .rounded {
+        width: 90%;
+        border-radius: 2rem;
+    }
+    > div {
+        height: 25%;
+        margin-block: 2rem;
+        padding: 1.2rem;
+        background-color: $main-color;
+        color: white;
+        font-size: x-large;
+    }
+    ul {
+        li {
+            margin-right: 0.5rem;
+            font-size: smaller;
+            color: grey;
+            &:not(:last-child) {
+                display: inline-block;
+            }
+            a {
+                color: grey;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
