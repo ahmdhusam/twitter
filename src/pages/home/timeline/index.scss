@@ -1,4 +1,94 @@
+$main-color: rgb(29, 155, 240);
+
+%wrapper {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
 #timeline {
-    background-color: blue;
     grid-area: timeline;
+    border-left: 1px grey solid;
+    border-right: 1px grey solid;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: blur(1);
+        .title {
+            color: white;
+        }
+        main {
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            &:hover {
+                background-color: rgba(gray, 0.2);
+            }
+            svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+    main {
+        header.tweet {
+            display: flex;
+            align-items: flex-start;
+            header {
+                flex-shrink: 1;
+                .avatar {
+                    @extend %wrapper;
+                }
+            }
+            form {
+                flex-grow: 2;
+                textarea {
+                    width: 100%;
+                    padding: 0.5rem;
+                    font-size: medium;
+                    background-color: transparent;
+                    color: white;
+                    border: none;
+                    outline: none;
+                    resize: none;
+                }
+                > div {
+                    padding: 0.5rem;
+                    padding-left: 0;
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-top: 1px grey solid;
+                    .media {
+                        position: relative;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+                        &:hover {
+                            background-color: rgba(gray, 0.2);
+                        }
+                        input[type='file'] {
+                            position: absolute;
+                            inset: 0;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
