@@ -33,7 +33,7 @@ export default function TimeLine() {
                                     name='image'
                                 />
                             </div>
-                            <input type='submit' />
+                            <input type='submit' value='Tweet' />
                         </div>
                     </form>
                 </header>

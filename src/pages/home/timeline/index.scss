@@ -70,7 +70,12 @@ $main-color: rgb(29, 155, 240);
                     border-top: 1px grey solid;
                     .media {
                         position: relative;
+                        width: 40px;
+                        height: 40px;
                         padding: 0.5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         border-radius: 50%;
                         &:hover {
                             background-color: rgba(gray, 0.2);
@@ -86,6 +91,14 @@ $main-color: rgb(29, 155, 240);
                             height: 20px;
                             color: $main-color;
                         }
+                    }
+                    input[type='submit'] {
+                        padding: 0.5rem 1rem;
+                        background-color: $main-color;
+                        border-radius: 2rem;
+                        color: white;
+                        font-size: large;
+                        border: none;
                     }
                 }
             }
