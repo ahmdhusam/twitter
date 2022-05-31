@@ -1,13 +1,5 @@
 $main-color: rgb(29, 155, 240);
 
-%wrapper {
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
 #timeline {
     grid-area: timeline;
     border-left: 1px grey solid;
@@ -44,9 +36,6 @@ $main-color: rgb(29, 155, 240);
             align-items: flex-start;
             header {
                 flex-shrink: 1;
-                .avatar {
-                    @extend %wrapper;
-                }
             }
             form {
                 flex-grow: 2;

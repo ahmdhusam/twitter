@@ -1,6 +1,7 @@
 import './index.scss';
 import { WiStars } from 'react-icons/wi';
 import { MdOutlinePermMedia } from 'react-icons/md';
+import { Avatar, Tweet } from '../../../components';
 
 export default function TimeLine() {
     return (
@@ -14,9 +15,7 @@ export default function TimeLine() {
             <main>
                 <header className='tweet'>
                     <header>
-                        <div className='avatar'>
-                            <img src='avatar.png' alt='avatar' />
-                        </div>
+                        <Avatar />
                     </header>
                     <form action=''>
                         <textarea
@@ -38,7 +37,7 @@ export default function TimeLine() {
                     </form>
                 </header>
                 <section>
-                    <article>Hello twitter</article>
+                    <Tweet />
                 </section>
             </main>
         </main>

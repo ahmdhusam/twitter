@@ -11,6 +11,7 @@ import { MdOutlineMail } from 'react-icons/md';
 import { BsPerson } from 'react-icons/bs';
 import { CgMoreO } from 'react-icons/cg';
 import { GiFeather } from 'react-icons/gi';
+import { Avatar } from '..';
 
 const icons = [
     FaTwitter,
@@ -34,9 +35,7 @@ export default function NavBar() {
                     <GiFeather className='icon' />
                 </li>
             </ul>
-            <div className='avatar'>
-                <img src='avatar.png' alt='avatar' />
-            </div>
+            <Avatar />
         </nav>
     );
 }
