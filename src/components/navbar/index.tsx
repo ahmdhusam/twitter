@@ -28,8 +28,8 @@ export default function NavBar() {
     return (
         <nav id='navbar'>
             <ul>
-                {icons.map(Icon => (
-                    <li>{<Icon className='icon' />}</li>
+                {icons.map((Icon, index) => (
+                    <li key={index}>{<Icon className='icon' />}</li>
                 ))}
                 <li className='tweet'>
                     <GiFeather className='icon' />

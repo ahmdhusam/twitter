@@ -1,7 +1,55 @@
+$main-color: rgb(29, 155, 240);
+
 #tweet {
     display: flex;
     align-items: flex-start;
+    gap: 0.5rem;
     padding: 0.5rem 1rem;
     border-top: 1px grey solid;
     border-bottom: 1px grey solid;
+    color: white;
+    main {
+        width: 100%;
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .title {
+                display: flex;
+                gap: 0.4rem;
+                h3 {
+                    font-size: large;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                span {
+                    color: grey;
+                }
+            }
+            .options {
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: grey;
+                border-radius: 50%;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgba($main-color, 0.1);
+                    svg {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        p.content {
+            padding: 0.2rem;
+            line-height: 1.5rem;
+            white-space: break-spaces;
+            word-break: break-word;
+        }
+    }
 }
