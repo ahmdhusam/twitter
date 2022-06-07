@@ -34,6 +34,7 @@ $main-color: rgb(29, 155, 240);
         header.tweet {
             display: flex;
             align-items: flex-start;
+            padding: 0 1rem;
             header {
                 flex-shrink: 1;
             }
