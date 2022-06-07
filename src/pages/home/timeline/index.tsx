@@ -38,6 +38,7 @@ export default function TimeLine() {
                 </header>
                 <section>
                     <Tweet />
+                    <Tweet />
                 </section>
             </main>
         </main>

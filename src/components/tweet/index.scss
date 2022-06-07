@@ -1,5 +1,18 @@
 $main-color: rgb(29, 155, 240);
 
+%iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba($main-color, 0.1);
+        color: $main-color;
+    }
+}
+
 #tweet {
     display: flex;
     align-items: flex-start;
@@ -31,25 +44,41 @@ $main-color: rgb(29, 155, 240);
             .options {
                 width: 25px;
                 height: 25px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: grey;
-                border-radius: 50%;
-                cursor: pointer;
-                &:hover {
-                    background-color: rgba($main-color, 0.1);
-                    svg {
-                        color: $main-color;
-                    }
-                }
+                @extend %iconWrapper;
             }
         }
         p.content {
-            padding: 0.2rem;
+            padding: 0.4rem 0.2rem;
             line-height: 1.5rem;
             white-space: break-spaces;
             word-break: break-word;
+        }
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        div {
+            width: 100%;
+            span {
+                width: 35px;
+                height: 35px;
+                @extend %iconWrapper;
+                &.retweet {
+                    &:hover {
+                        color: green;
+                    }
+                }
+                &.like {
+                    &:hover {
+                        color: red;
+                    }
+                }
+                svg {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
         }
     }
 }
